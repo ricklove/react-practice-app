@@ -30,13 +30,13 @@ class App extends Component {
 
   render() {
 
-    // if (this.state.error) {
-    //   return (
-    //     <div>
-    //       Oops, it broke!
-    //     </div>
-    //   );
-    // }
+    if (this.state.error) {
+      return (
+        <div>
+          Oops, it broke!
+        </div>
+      );
+    }
 
     if (this.state.isLoading) {
       return (

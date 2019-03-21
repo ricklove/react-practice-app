@@ -29,3 +29,10 @@ it('displays hello world for greeting toggle enabled', () => {
   expect(wrapper.contains(mainDiv)).toEqual(true);
 });
 
+it('displays error message error', () => {
+  const wrapper = shallow(<App />);
+  wrapper.setState({ error: true });
+  const mainDiv = <div>Oops, it broke!</div>;
+  expect(wrapper.contains(mainDiv)).toEqual(true);
+});
+
