@@ -1,8 +1,10 @@
 Practice React App
 
+Simple App Created with Create-React-App with basic development tasks for debugging and testing.
+
 Created with create-react-app.
 
-### Commands
+### Tasks
 
 - running app
     - `npm start`
