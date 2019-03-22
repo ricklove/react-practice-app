@@ -1,0 +1,239 @@
+{
+    "columns_count": 39,
+    "columns": [
+      {
+        "name": "hasNotes",
+        "id": "hasNotes--metadata",
+        "type": "boolean",
+        "source": "metadata"
+      },
+      {
+        "name": "duration",
+        "id": "duration--metadata",
+        "type": "timenumber",
+        "source": "metadata"
+      },
+      {
+        "name": "codeSHA",
+        "id": "codeSHA--metadata",
+        "type": "string",
+        "source": "metadata"
+      },
+      {
+        "name": "val_acc",
+        "id": "val_acc--metrics",
+        "type": "double",
+        "source": "metrics"
+      },
+      {
+        "name": "file_name",
+        "id": "file_name--metadata",
+        "type": "string",
+        "source": "metadata"
+      },
+      {
+        "name": "acc",
+        "id": "acc--metrics",
+        "type": "double",
+        "source": "metrics"
+      },
+      {
+        "name": "s3 test",
+        "id": "s3 test--tag",
+        "type": "string",
+        "source": "tag"
+      },
+      {
+        "name": "experimentKey",
+        "id": "experimentKey--metadata",
+        "type": "string",
+        "source": "metadata"
+      },
+      {
+        "name": "samples",
+        "id": "samples--params",
+        "type": "double",
+        "source": "params"
+      },
+      {
+        "name": "start_metric",
+        "id": "start_metric--metrics",
+        "type": "double",
+        "source": "metrics"
+      },
+      {
+        "name": "end_server_timestamp",
+        "id": "end_server_timestamp--metadata",
+        "type": "datetime",
+        "source": "metadata"
+      },
+      {
+        "name": "bytearr",
+        "id": "bytearr--tag",
+        "type": "string",
+        "source": "tag"
+      },
+      {
+        "name": "installed_packages",
+        "id": "installed_packages--metadata",
+        "type": "string",
+        "source": "metadata"
+      },
+      {
+        "name": "size",
+        "id": "size--metrics",
+        "type": "double",
+        "source": "metrics"
+      },
+      {
+        "name": "file_path",
+        "id": "file_path--metadata",
+        "type": "string",
+        "source": "metadata"
+      },
+      {
+        "name": "last_message_time",
+        "id": "last_message_time--metadata",
+        "type": "datetime",
+        "source": "metadata"
+      },
+      {
+        "name": "runActive",
+        "id": "runActive--metadata",
+        "type": "boolean",
+        "source": "metadata"
+      },
+      {
+        "name": "batch",
+        "id": "batch--metrics",
+        "type": "double",
+        "source": "metrics"
+      },
+      {
+        "name": "hasImages",
+        "id": "hasImages--metadata",
+        "type": "boolean",
+        "source": "metadata"
+      },
+      {
+        "name": "user_name",
+        "id": "user_name--metadata",
+        "type": "string",
+        "source": "metadata"
+      },
+      {
+        "name": "trainable_params",
+        "id": "trainable_params--log_other",
+        "type": "double",
+        "source": "log_other"
+      },
+      {
+        "name": "start_server_timestamp",
+        "id": "start_server_timestamp--metadata",
+        "type": "datetime",
+        "source": "metadata"
+      },
+      {
+        "name": "runId",
+        "id": "runId--metadata",
+        "type": "string",
+        "source": "metadata"
+      },
+      {
+        "name": "steps",
+        "id": "steps--params",
+        "type": "string",
+        "source": "params"
+      },
+      {
+        "name": "batch_size",
+        "id": "batch_size--params",
+        "type": "double",
+        "source": "params"
+      },
+      {
+        "name": "RMSprop_decay",
+        "id": "RMSprop_decay--params",
+        "type": "double",
+        "source": "params"
+      },
+      {
+        "name": "curr_step",
+        "id": "curr_step--params",
+        "type": "double",
+        "source": "params"
+      },
+      {
+        "name": "RMSprop_lr",
+        "id": "RMSprop_lr--params",
+        "type": "double",
+        "source": "params"
+      },
+      {
+        "name": "hasHtml",
+        "id": "hasHtml--metadata",
+        "type": "boolean",
+        "source": "metadata"
+      },
+      {
+        "name": "RMSprop_rho",
+        "id": "RMSprop_rho--params",
+        "type": "double",
+        "source": "params"
+      },
+      {
+        "name": "val_loss",
+        "id": "val_loss--metrics",
+        "type": "double",
+        "source": "metrics"
+      },
+      {
+        "name": "My simple tag",
+        "id": "My simple tag--tag",
+        "type": "string",
+        "source": "tag"
+      },
+      {
+        "name": "optimizationId",
+        "id": "optimizationId--metadata",
+        "type": "string",
+        "source": "metadata"
+      },
+      {
+        "name": "curr_epoch",
+        "id": "curr_epoch--params",
+        "type": "double",
+        "source": "params"
+      },
+      {
+        "name": "loss",
+        "id": "loss--metrics",
+        "type": "double",
+        "source": "metrics"
+      },
+      {
+        "name": "dataset_hash",
+        "id": "dataset_hash--params",
+        "type": "string",
+        "source": "params"
+      },
+      {
+        "name": "RMSprop_epsilon",
+        "id": "RMSprop_epsilon--params",
+        "type": "double",
+        "source": "params"
+      },
+      {
+        "name": "epochs",
+        "id": "epochs--params",
+        "type": "double",
+        "source": "params"
+      },
+      {
+        "name": "end of experiment",
+        "id": "end of experiment--metrics",
+        "type": "double",
+        "source": "metrics"
+      }
+    ]
+  }

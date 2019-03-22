@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { getToggles } from './feature-toggles/toggles';
+import ColumnsSelector from './components/columns-selector';
 
 class App extends Component {
   constructor(props) {
@@ -51,7 +52,10 @@ class App extends Component {
     return (
       toggles.greeting ? (
         <div>
-          Hello World
+          <ColumnsSelector />
+          <div>
+            Hello World
+          </div>
         </div>
       ) : (
           <div>
