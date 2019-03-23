@@ -1,48 +1,41 @@
 import React, { Component } from "react";
-import columnsData from "../data/columns.json";
+import { ListBox } from "@bit/primefaces.primereact.listbox";
+import PrimereactStyle from "@bit/primefaces.primereact.internal.stylelinks";
+import { columnsData, IColumnData } from "../data/columns";
 
-const Column = ({ id, label, checked, onToggle }: { id: string, label: string, checked: boolean, onToggle: () => void }) => (
-    <div id={id}>
-        <input type="checkbox" onChange={onToggle} checked={checked} />
-        <span>{label}</span>
-    </div>
+// const columns = columnsData.columns.map(x => ({ ...x, title: x.name + " " + x.source }));
+
+const Column = ({ name, source }: IColumnData) => (
+    <div><span style={{ fontWeight: "bold" }}>{name}</span> {source}</div>
 );
 
-class ColumnsSelector extends Component<{}, { selected: string[] }> {
+class ColumnsSelector extends Component<{}, { columns: IColumnData[] }> {
     constructor(props: any) {
         super(props);
         this.state = {
-            selected: []
+            columns: []
         };
     }
 
-    toggleColumn = (columnId: string) => {
-        console.log("toggleColumn", columnId, this.state.selected);
-
-        let selected = this.state.selected;
-        if (selected.indexOf(columnId) >= 0) {
-            selected = selected.filter(x => x !== columnId);
-        } else {
-            selected = [...selected, columnId];
-        }
-
-        this.setState({ selected: selected });
+    selectItem = ({ value }: { value: IColumnData[] }) => {
+        this.setState({ columns: value });
     }
 
     render() {
 
-        const columns = columnsData.columns.map(x => ({
-            id: x.id,
-            label: x.name + " " + x.source,
-            checked: this.state.selected.indexOf(x.id) >= 0,
-        }));
-
         return (
             <div>
+                <PrimereactStyle />
                 <div>Columns</div>
-                {columns.map(x => (
-                    <Column key={x.id} id={x.id} label={x.label} checked={x.checked} onToggle={() => this.toggleColumn(x.id)} />
-                ))}
+                <ListBox
+                    value={this.state.columns}
+                    options={columnsData.columns}
+                    onChange={this.selectItem}
+                    multiple={true}
+                    dataKey="id"
+                    optionLabel="title"
+                    itemTemplate={Column}
+                />
             </div>
         );
     }
