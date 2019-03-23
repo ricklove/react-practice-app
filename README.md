@@ -4,6 +4,7 @@ Simple App Created with Create-React-App with basic development tasks for debugg
 
 Created with create-react-app.
 
+
 ### Tasks
 
 - running app
@@ -18,6 +19,7 @@ Created with create-react-app.
     - choose 'Debug CRA Tests'
     - set breakpoints
     - F5
+
 
 ### Concepts
 
