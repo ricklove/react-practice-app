@@ -10,8 +10,8 @@ export class MainLayout extends Component<{
         return (
             <div className='mainLayout'>
                 <div className='header'>{this.props.header}</div>
-                <div className='sidebar'>{this.props.sidebar}</div>
                 <div className='content'>{this.props.content}</div>
+                <div className='sidebar'>{this.props.sidebar}</div>
                 <div className='footer'>{this.props.footer}</div>
             </div>
         );
