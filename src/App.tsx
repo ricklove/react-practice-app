@@ -11,6 +11,8 @@ import ColumnsSelector from "./components/columns-selector";
 import { ProgressBar } from "primereact/progressbar";
 import { MainLayout } from "./components/layout/main-layout";
 import { FunnyMessages } from "./components/funny-messages";
+import BlogList from "./components/blog/blog-list";
+import { sampleArticles } from "./components/blog/sample-articles";
 
 class App extends Component<{}, {
   isLoading: boolean,
@@ -72,9 +74,12 @@ class App extends Component<{}, {
     const toggles = this.state.toggles;
 
     const content = toggles.greeting ? (
-      <h1>
-        Hello World
-      </h1>
+      <div>
+        <h1>
+          Hello World
+        </h1>
+        <BlogList articles={sampleArticles} />
+      </div>
     ) : (
         <h1>
           Sorry, we're Closed!
