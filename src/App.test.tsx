@@ -11,28 +11,28 @@ it("renders without crashing", () => {
 
 it("displays loading by default", () => {
   const wrapper = shallow(<App />);
-  const mainDiv = <div>Loading...</div>;
+  const mainDiv = <h1>Loading...</h1>;
   expect(wrapper.contains(mainDiv)).toEqual(true);
 });
 
 it("displays sorry closed for greeting toggle disabled", () => {
   const wrapper = shallow(<App />);
   wrapper.setState({ isLoading: false, toggles: { greeting: false } });
-  const mainDiv = <div>Sorry, we're Closed!</div>;
+  const mainDiv = <h1>Sorry, we're Closed!</h1>;
   expect(wrapper.contains(mainDiv)).toEqual(true);
 });
 
 it("displays hello world for greeting toggle enabled", () => {
   const wrapper = shallow(<App />);
   wrapper.setState({ isLoading: false, toggles: { greeting: true } });
-  const mainDiv = <div>Hello World</div>;
+  const mainDiv = <h1>Hello World</h1>;
   expect(wrapper.contains(mainDiv)).toEqual(true);
 });
 
 it("displays error message error", () => {
   const wrapper = shallow(<App />);
   wrapper.setState({ error: true });
-  const mainDiv = <div>Oops, it broke!</div>;
+  const mainDiv = <h1>Oops, it broke!</h1>;
   expect(wrapper.contains(mainDiv)).toEqual(true);
 });
 

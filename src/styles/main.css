@@ -1,3 +1,18 @@
+h1{
+    font-size: 24px;
+    padding: 4px;
+}
+
+h2{
+    font-size: 20px;
+    padding: 4px;
+}
+
+h3{
+    font-size: 18px;
+    padding: 4px;
+}
+
 .p-listbox{
     width: 20em;
 }

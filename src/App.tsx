@@ -41,17 +41,17 @@ class App extends Component<{}, {
 
     if (this.state.error) {
       return (
-        <div>
+        <h1>
           Oops, it broke!
-        </div>
+        </h1>
       );
     }
 
     if (this.state.isLoading) {
       return (
-        <div>
+        <h1>
           Loading...
-        </div>
+        </h1>
       );
     }
 
@@ -60,15 +60,15 @@ class App extends Component<{}, {
     return (
       toggles.greeting ? (
         <div>
-          <ColumnsSelector />
-          <div>
+          <h1>
             Hello World
-          </div>
+          </h1>
+          <ColumnsSelector />
         </div>
       ) : (
-          <div>
+          <h1>
             Sorry, we're Closed!
-          </div>
+          </h1>
         )
     );
   }
