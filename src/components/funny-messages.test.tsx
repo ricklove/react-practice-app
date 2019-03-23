@@ -10,6 +10,6 @@ it("renders without crashing", () => {
 });
 
 it("displays a column id", () => {
-    const wrapper = render(<FunnyMessages />);
+    const wrapper = shallow(<FunnyMessages />);
     expect(wrapper.html()).toContain("<h3>");
 });
