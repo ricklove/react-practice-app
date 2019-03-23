@@ -38,7 +38,7 @@ import faker from "faker";
 // ];
 
 function createArticle(): IBlogPost {
-    const title = faker.random.words();
+    const title = faker.random.words().split(' ').map(x => x[0].toUpperCase() + x.substr(1)).join(' ');
     const content = new Array(5 + (Math.random() * 10) | 0).fill(0).map(x => {
         const type = (5 * Math.random()) | 0;
         switch (type) {

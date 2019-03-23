@@ -16,15 +16,14 @@ class BlogList extends Component<{ articles: IBlogPost[] }, { articles: IBlogPos
 
     Post = ({ post }: { post: IBlogPostViewModel }) => (
         <div className='blog-post'>
-            <h1 className='blog-post-title' onClick={post.toggle}>
-                {!!post.isSelected && (<span>&lt;&lt;</span>)}
-                {!post.isSelected && (<span>&gt;&gt;</span>)}
-                {post.title}
+            <h1 className={post.isSelected ? 'blog-post-title blog-post-title-expanded' : 'blog-post-title blog-post-title-collapsed'}
+                onClick={post.toggle}>
+                <span>{post.title}</span>
             </h1>
             <div className={post.isSelected ? 'blog-post-content' : 'blog-post-content blog-post-content-collapsed'}>
                 <MarkdownPreview value={post.isSelected ? post.content : post.abstract} />
             </div>
-            {!post.isSelected && (<div className='blog-post-more' onClick={post.toggle}>Read More...</div>)}
+            {!post.isSelected && (<div className='blog-post-more' onClick={post.toggle}><div>Read More...</div></div>)}
         </div>
     );
 
