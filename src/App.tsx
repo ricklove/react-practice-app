@@ -1,11 +1,15 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { getToggles } from './feature-toggles/toggles';
-import ColumnsSelector from './components/columns-selector';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { getToggles, Toggles } from "./feature-toggles/toggles";
+import ColumnsSelector from "./components/columns-selector";
 
-class App extends Component {
-  constructor(props) {
+class App extends Component<{}, {
+  isLoading: boolean,
+  error: boolean,
+  toggles: Toggles,
+}> {
+  constructor(props: any) {
     super(props);
     this.state = {
       isLoading: true,
@@ -22,7 +26,7 @@ class App extends Component {
         isLoading: false,
         toggles: t,
       });
-    } catch{
+    } catch {
       this.setState({
         error: true,
       });

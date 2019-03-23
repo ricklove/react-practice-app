@@ -36,3 +36,8 @@ Created with create-react-app.
 
 - Example async unit test with timeout:
     - `.\src\feature-toggles\toggles.test.js`
+
+- Using Typescript
+    - Add typescript:
+        - `yarn add typescript @types/node @types/react @types/react-dom @types/jest`
+    - Change component file extensions for react components and react tests to `.tsx`

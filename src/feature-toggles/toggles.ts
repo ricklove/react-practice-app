@@ -1,6 +1,7 @@
+import { PromiseType } from "../utils/type-utils";
 
 export async function getToggles() {
-    const greetingReponse = await fetch('https://raw.githubusercontent.com/Nimrod007/someRepo/master/ft.json');
+    const greetingReponse = await fetch("https://raw.githubusercontent.com/Nimrod007/someRepo/master/ft.json");
 
     let greetingValue = false;
     if (greetingReponse.ok) {
@@ -12,3 +13,5 @@ export async function getToggles() {
         greeting: greetingValue,
     };
 }
+
+export type Toggles = PromiseType<ReturnType<typeof getToggles>>;

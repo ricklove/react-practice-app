@@ -1,32 +1,39 @@
-import React, { Component } from 'react';
-import columnsData from '../data/columns.json';
+import React, { Component } from "react";
+import columnsData from "../data/columns.json";
 
-class ColumnsSelector extends Component {
-    constructor(props) {
+const Column = ({ id, label, checked, onToggle }: { id: string, label: string, checked: boolean, onToggle: () => void }) => (
+    <div id={id}>
+        <input type="checkbox" onChange={onToggle} checked={checked} />
+        <span>{label}</span>
+    </div>
+);
+
+class ColumnsSelector extends Component<{}, { selected: string[] }> {
+    constructor(props: any) {
         super(props);
         this.state = {
             selected: []
         };
     }
 
-    toggleColumn = (columnId) => {
-        console.log('toggleColumn', columnId, this.state.selected);
+    toggleColumn = (columnId: string) => {
+        console.log("toggleColumn", columnId, this.state.selected);
 
         let selected = this.state.selected;
         if (selected.indexOf(columnId) >= 0) {
-            selected = selected.filter(x => x != columnId);
+            selected = selected.filter(x => x !== columnId);
         } else {
             selected = [...selected, columnId];
         }
 
-        this.setState({ selected: selected })
-    };
+        this.setState({ selected: selected });
+    }
 
     render() {
 
         const columns = columnsData.columns.map(x => ({
             id: x.id,
-            label: x.name + ' ' + x.source,
+            label: x.name + " " + x.source,
             checked: this.state.selected.indexOf(x.id) >= 0,
         }));
 
@@ -40,12 +47,5 @@ class ColumnsSelector extends Component {
         );
     }
 }
-
-const Column = ({ id, label, checked, onToggle }) => (
-    <div id={id}>
-        <input type='checkbox' onChange={onToggle} checked={checked} />
-        <span>{label}</span>
-    </div>
-);
 
 export default ColumnsSelector;
