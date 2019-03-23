@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { IBlogPost } from "./blog-types";
 import { MarkdownPreview } from 'react-marked-markdown';
-import { Button } from "primereact/button";
+import { Accordion, AccordionTab } from "primereact/accordion";
 import "./blog.css";
 
-type IBlogPostViewModel = IBlogPost & { isSelected?: boolean, toggle?: () => void };
+type IBlogPostViewModel = IBlogPost & { key: string, isSelected?: boolean, toggle?: () => void };
 class BlogList extends Component<{ articles: IBlogPost[] }, { articles: IBlogPostViewModel[], selected: null | IBlogPostViewModel }> {
     constructor(props: any) {
         super(props);
         this.state = {
-            articles: [...this.props.articles],
+            articles: this.props.articles.map((x, i) => ({ ...x, key: i + '' })),
             selected: null,
         };
     }
@@ -21,9 +21,10 @@ class BlogList extends Component<{ articles: IBlogPost[] }, { articles: IBlogPos
                 {!post.isSelected && (<span>&gt;&gt;</span>)}
                 {post.title}
             </h1>
-            <div className='blog-post-content'>
+            <div className={post.isSelected ? 'blog-post-content' : 'blog-post-content blog-post-content-collapsed'}>
                 <MarkdownPreview value={post.isSelected ? post.content : post.abstract} />
             </div>
+            {!post.isSelected && (<div className='blog-post-more' onClick={post.toggle}>Read More...</div>)}
         </div>
     );
 
@@ -34,6 +35,15 @@ class BlogList extends Component<{ articles: IBlogPost[] }, { articles: IBlogPos
     }
 
     render() {
+
+        // // Using Accordion
+        // return (
+        //     <Accordion multiple={true}>
+        //         {this.state.articles.map(x => (
+        //             <AccordionTab header={x.title}><MarkdownPreview value={x.content} /></AccordionTab>
+        //         ))}
+        //     </Accordion>
+        // );
 
         this.state.articles.forEach(x => {
             if (!x.toggle) {

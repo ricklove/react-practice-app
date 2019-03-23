@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/enzyme": "^3.9.1",
     "@types/jest": "^24.0.11",
     "@types/node": "^11.11.6",
     "@types/react": "^16.8.8",
@@ -10,6 +11,7 @@
     "classnames": "^2.2.6",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.11.2",
+    "faker": "^4.1.0",
     "primeicons": "^1.0.0",
     "primereact": "^3.1.0",
     "react": "^16.8.4",
@@ -37,6 +39,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@types/enzyme": "^3.9.1"
+    "@types/faker": "^4.1.5"
   }
 }
