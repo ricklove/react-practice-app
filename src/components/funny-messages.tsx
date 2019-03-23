@@ -20,7 +20,7 @@ export function getFunnyMessages() {
     return shuffle(messages);
 }
 
-export class FunnyMessages extends Component<{}, { messages: string[], index: number }>{
+export class FunnyMessages extends Component<{}, { messages: string[], index: number }> {
     private _id: NodeJS.Timeout | null = null;
 
     constructor(props: any) {

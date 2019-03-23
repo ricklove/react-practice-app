@@ -17,7 +17,7 @@ class ColumnsSelector extends Component<{}, { columns: IColumnData[] }> {
 
     Column = ({ id, name, source }: IColumnData) => (
         <div id={id}><span style={{ fontWeight: "bold" }}>{name}</span> {source}</div>
-    );
+    )
 
     render() {
 
