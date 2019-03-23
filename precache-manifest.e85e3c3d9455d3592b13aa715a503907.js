@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/react-practice-app/static/media/open-sans-v15-latin-regular.c045b73d.ttf"
   },
   {
-    "revision": "b30cdbbdb803dc890b51",
-    "url": "/react-practice-app/static/css/main.9b6bbad8.chunk.css"
+    "revision": "5bef5dba13b85e9db693",
+    "url": "/react-practice-app/static/css/main.f1940701.chunk.css"
   },
   {
     "revision": "9d303605da5cddef5b3e",
@@ -28,16 +28,12 @@ self.__precacheManifest = [
     "url": "/react-practice-app/static/media/open-sans-v15-latin-300.60c86674.woff2"
   },
   {
-    "revision": "521d17bc9f3526c690e8ada6eee55bec",
-    "url": "/react-practice-app/static/media/open-sans-v15-latin-300.521d17bc.woff"
-  },
-  {
     "revision": "177cc92d2e8027712a8c1724abd272cd",
     "url": "/react-practice-app/static/media/open-sans-v15-latin-300.177cc92d.ttf"
   },
   {
-    "revision": "27ef0b062b2e221df16f3bbd97c2dca8",
-    "url": "/react-practice-app/static/media/open-sans-v15-latin-300.27ef0b06.svg"
+    "revision": "521d17bc9f3526c690e8ada6eee55bec",
+    "url": "/react-practice-app/static/media/open-sans-v15-latin-300.521d17bc.woff"
   },
   {
     "revision": "9dce7f01715340861bdb57318e2f3fdc",
@@ -48,12 +44,20 @@ self.__precacheManifest = [
     "url": "/react-practice-app/static/media/open-sans-v15-latin-regular.cffb686d.woff2"
   },
   {
+    "revision": "27ef0b062b2e221df16f3bbd97c2dca8",
+    "url": "/react-practice-app/static/media/open-sans-v15-latin-300.27ef0b06.svg"
+  },
+  {
     "revision": "bf2d0783515b7d75c35bde69e01b3135",
     "url": "/react-practice-app/static/media/open-sans-v15-latin-regular.bf2d0783.woff"
   },
   {
-    "revision": "b30cdbbdb803dc890b51",
-    "url": "/react-practice-app/static/js/main.6afa2f3e.chunk.js"
+    "revision": "5bef5dba13b85e9db693",
+    "url": "/react-practice-app/static/js/main.0304368f.chunk.js"
+  },
+  {
+    "revision": "148a6749baa5f658a45183ddb5ee159f",
+    "url": "/react-practice-app/static/media/open-sans-v15-latin-700.148a6749.eot"
   },
   {
     "revision": "7aab4c13671282c90669eb6a10357e41",
@@ -62,10 +66,6 @@ self.__precacheManifest = [
   {
     "revision": "d08c09f2f169f4a6edbcf8b8d1636cb4",
     "url": "/react-practice-app/static/media/open-sans-v15-latin-700.d08c09f2.woff2"
-  },
-  {
-    "revision": "148a6749baa5f658a45183ddb5ee159f",
-    "url": "/react-practice-app/static/media/open-sans-v15-latin-700.148a6749.eot"
   },
   {
     "revision": "623e3205570002af47fc2b88f9335d19",
@@ -104,7 +104,7 @@ self.__precacheManifest = [
     "url": "/react-practice-app/static/css/2.18db4fc7.chunk.css"
   },
   {
-    "revision": "78da707969cdbe7508b023a3c6636a85",
+    "revision": "b7af20b91e32d76bcaf7ab2e5687caf7",
     "url": "/react-practice-app/index.html"
   }
 ];
