@@ -4,10 +4,12 @@ import "primereact/resources/themes/luna-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "./App.css";
+import "./components/layout/layout.css";
 import "./styles/main.css";
 import { getToggles, Toggles } from "./feature-toggles/toggles";
 import ColumnsSelector from "./components/columns-selector";
 import { ProgressBar } from "primereact/progressbar";
+import { MainLayout } from "./components/layout/main-layout";
 import { FunnyMessages } from "./components/funny-messages";
 
 class App extends Component<{}, {
@@ -69,19 +71,25 @@ class App extends Component<{}, {
 
     const toggles = this.state.toggles;
 
+    const content = toggles.greeting ? (
+      <h1>
+        Hello World
+      </h1>
+    ) : (
+        <h1>
+          Sorry, we're Closed!
+      </h1>
+      );
+
+    const sidebar = (<ColumnsSelector />);
+
     return (
-      toggles.greeting ? (
-        <div>
-          <h1>
-            Hello World
-          </h1>
-          <ColumnsSelector />
-        </div>
-      ) : (
-          <h1>
-            Sorry, we're Closed!
-          </h1>
-        )
+      <div>
+        <MainLayout
+          content={content}
+          sidebar={sidebar}
+        />
+      </div>
     );
   }
 }

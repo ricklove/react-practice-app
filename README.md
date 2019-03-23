@@ -24,22 +24,27 @@ Created with create-react-app.
 ### Concepts
 
 - Example Class Component with async loading and error and loading messages
-    - `.\src\App.js`
+    - `.\src\App`
 
 - Example Class Component with json data
-    - `.\src\components\columns-selector.js`
+    - `.\src\components\columns-selector`
 
 - Example Functional Component
-    - `.\src\components\columns-selector.js`
+    - `.\src\components\columns-selector`
 
 - Examples of basic component tests:
-    - `.\src\App.test.js`
-    - `.\src\components\columns-selector.test.js`
+    - `.\src\App.test`
+    - `.\src\components\columns-selector.test`
 
 - Example async unit test with timeout:
-    - `.\src\feature-toggles\toggles.test.js`
+    - `.\src\feature-toggles\toggles.test`
 
 - Using Typescript
     - Add typescript:
         - `yarn add typescript @types/node @types/react @types/react-dom @types/jest`
     - Change component file extensions for react components and react tests to `.tsx`
+
+- Css Grid
+    - `./components/layout/main-layout`
+    - `./components/layout/layout.css`
+
