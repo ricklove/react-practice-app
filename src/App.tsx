@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
+import "primereact/resources/themes/luna-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 import "./App.css";
+import "./styles/main.css";
 import { getToggles, Toggles } from "./feature-toggles/toggles";
 import ColumnsSelector from "./components/columns-selector";
 

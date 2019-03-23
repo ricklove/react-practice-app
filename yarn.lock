@@ -634,7 +634,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-transform-typescript" "^7.1.0"
 
-"@babel/runtime@7.3.1":
+"@babel/runtime@7.3.1", "@babel/runtime@^7.1.2":
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.1.tgz#574b03e8e8a9898eaf4a872a92ea20b7846f6f2a"
   dependencies:
@@ -669,55 +669,6 @@
     esutils "^2.0.2"
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
-
-"@bit/primefaces.primereact.inputtext@3.1.0":
-  version "3.1.0"
-  resolved "https://node.bit.dev/primefaces.primereact.inputtext/-/primefaces.primereact.inputtext-3.1.0.tgz#c39d2303eebc8e0a7fb85c2d0b96b7ba107086ce"
-  dependencies:
-    "@bit/primefaces.primereact.keyfilter" "3.1.0"
-    "@bit/primefaces.primereact.tooltip" "3.1.0"
-    "@bit/primefaces.primereact.utils.dom-handler" "3.1.0"
-    classnames "^2.2.6"
-    prop-types "^15.6.2"
-    react "^16.6.3"
-
-"@bit/primefaces.primereact.internal.stylelinks@^3.1.0":
-  version "3.1.0"
-  resolved "https://node.bit.dev/primefaces.primereact.internal.stylelinks/-/primefaces.primereact.internal.stylelinks-3.1.0.tgz#e981581d572e8e1b7f3598f1b6839df27d27476f"
-  dependencies:
-    react "^16.6.3"
-
-"@bit/primefaces.primereact.keyfilter@3.1.0":
-  version "3.1.0"
-  resolved "https://node.bit.dev/primefaces.primereact.keyfilter/-/primefaces.primereact.keyfilter-3.1.0.tgz#b23d691eb6d4f5068ec822d3b2e378ac4c55714a"
-  dependencies:
-    "@bit/primefaces.primereact.utils.dom-handler" "3.1.0"
-
-"@bit/primefaces.primereact.listbox@^3.1.0":
-  version "3.1.0"
-  resolved "https://node.bit.dev/primefaces.primereact.listbox/-/primefaces.primereact.listbox-3.1.0.tgz#742560132fc6fe6c0f89f675cd8ea5fd2c62446e"
-  dependencies:
-    "@bit/primefaces.primereact.inputtext" "3.1.0"
-    "@bit/primefaces.primereact.tooltip" "3.1.0"
-    "@bit/primefaces.primereact.utils.dom-handler" "3.1.0"
-    "@bit/primefaces.primereact.utils.object-utils" "3.1.0"
-    classnames "^2.2.6"
-    prop-types "^15.6.2"
-    react "^16.6.3"
-
-"@bit/primefaces.primereact.tooltip@3.1.0":
-  version "3.1.0"
-  resolved "https://node.bit.dev/primefaces.primereact.tooltip/-/primefaces.primereact.tooltip-3.1.0.tgz#4513c37f9e7204c7b692e79afe51f5a31e672c87"
-  dependencies:
-    "@bit/primefaces.primereact.utils.dom-handler" "3.1.0"
-
-"@bit/primefaces.primereact.utils.dom-handler@3.1.0":
-  version "3.1.0"
-  resolved "https://node.bit.dev/primefaces.primereact.utils.dom-handler/-/primefaces.primereact.utils.dom-handler-3.1.0.tgz#c76ccdd1ad283cda3697ecc4dfc08434f3136ba4"
-
-"@bit/primefaces.primereact.utils.object-utils@3.1.0":
-  version "3.1.0"
-  resolved "https://node.bit.dev/primefaces.primereact.utils.object-utils/-/primefaces.primereact.utils.object-utils-3.1.0.tgz#f313852700039f806ebf275e4d20b55b9e9e6ec0"
 
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
@@ -2733,6 +2684,12 @@ dom-converter@^0.2:
   resolved "https://registry.yarnpkg.com/dom-converter/-/dom-converter-0.2.0.tgz#6721a9daee2e293682955b6afe416771627bb768"
   dependencies:
     utila "~0.4"
+
+dom-helpers@^3.3.1:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/dom-helpers/-/dom-helpers-3.4.0.tgz#e9b369700f959f62ecde5a6babde4bccd9169af8"
+  dependencies:
+    "@babel/runtime" "^7.1.2"
 
 dom-serializer@0, dom-serializer@~0.1.0:
   version "0.1.1"
@@ -6813,6 +6770,14 @@ pretty-format@^23.6.0:
     ansi-regex "^3.0.0"
     ansi-styles "^3.2.0"
 
+primeicons@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-1.0.0.tgz#90061f168ef6227f21f0a7db8204ffa85cd27aec"
+
+primereact@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/primereact/-/primereact-3.1.0.tgz#39262611140bd7c9164d7236770a99b46e58063b"
+
 private@^0.1.6, private@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
@@ -7061,6 +7026,10 @@ react-is@^16.8.1, react-is@^16.8.4:
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.4.tgz#90f336a68c3a29a096a3d648ab80e87ec61482a2"
 
+react-lifecycles-compat@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+
 react-scripts@2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-2.1.8.tgz#21195bb928b2c0462aa98b2d32edf7d034cff2a9"
@@ -7123,7 +7092,16 @@ react-test-renderer@^16.0.0-0, react-test-renderer@^16.8.4:
     react-is "^16.8.4"
     scheduler "^0.13.4"
 
-react@^16.6.3, react@^16.8.4:
+react-transition-group@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/react-transition-group/-/react-transition-group-2.7.0.tgz#60ca3bb2bf83fe71c50816a936e985ce7b8134dc"
+  dependencies:
+    dom-helpers "^3.3.1"
+    loose-envify "^1.4.0"
+    prop-types "^15.6.2"
+    react-lifecycles-compat "^3.0.4"
+
+react@^16.8.4:
   version "16.8.4"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.4.tgz#fdf7bd9ae53f03a9c4cd1a371432c206be1c4768"
   dependencies:

@@ -11,7 +11,7 @@ it("renders without crashing", () => {
 
 it("displays Columns header", () => {
     const wrapper = shallow(<ColumnsSelector />);
-    const mainDiv = <div>Columns</div>;
+    const mainDiv = <h3>Columns</h3>;
     expect(wrapper.contains(mainDiv)).toEqual(true);
 });
 

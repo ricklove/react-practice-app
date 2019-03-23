@@ -1,13 +1,7 @@
 import React, { Component } from "react";
-import { ListBox } from "@bit/primefaces.primereact.listbox";
-import PrimereactStyle from "@bit/primefaces.primereact.internal.stylelinks";
 import { columnsData, IColumnData } from "../data/columns";
+import { ListBox } from "primereact/listbox";
 
-// const columns = columnsData.columns.map(x => ({ ...x, title: x.name + " " + x.source }));
-
-const Column = ({ name, source }: IColumnData) => (
-    <div><span style={{ fontWeight: "bold" }}>{name}</span> {source}</div>
-);
 
 class ColumnsSelector extends Component<{}, { columns: IColumnData[] }> {
     constructor(props: any) {
@@ -21,20 +15,25 @@ class ColumnsSelector extends Component<{}, { columns: IColumnData[] }> {
         this.setState({ columns: value });
     }
 
+    Column = ({ id, name, source }: IColumnData) => (
+        <div id={id}><span style={{ fontWeight: "bold" }}>{name}</span> {source}</div>
+    );
+
     render() {
+
+        const columns = columnsData.columns.map(x => ({ ...x, key: x.id, title: x.name + " " + x.source }));
 
         return (
             <div>
-                <PrimereactStyle />
-                <div>Columns</div>
+                <h3>Columns</h3>
                 <ListBox
                     value={this.state.columns}
-                    options={columnsData.columns}
+                    options={columns}
                     onChange={this.selectItem}
                     multiple={true}
                     dataKey="id"
                     optionLabel="title"
-                    itemTemplate={Column}
+                    itemTemplate={this.Column}
                 />
             </div>
         );
