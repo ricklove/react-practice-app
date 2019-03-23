@@ -54,3 +54,7 @@ Created with create-react-app.
     - Automatic Article Abstract (Content before first # section)
     - Expand/Collapse Article
 
+- Deploy to Github Pages
+    - https://facebook.github.io/create-react-app/docs/deployment#github-pages-https-pagesgithubcom
+
+    
