@@ -7,6 +7,8 @@ import "./App.css";
 import "./styles/main.css";
 import { getToggles, Toggles } from "./feature-toggles/toggles";
 import ColumnsSelector from "./components/columns-selector";
+import { ProgressBar } from "primereact/progressbar";
+import { FunnyMessages } from "./components/funny-messages";
 
 class App extends Component<{}, {
   isLoading: boolean,
@@ -20,7 +22,11 @@ class App extends Component<{}, {
       error: false,
       toggles: { greeting: false },
     };
-    this.load();
+
+    // Simulate slow load
+    setTimeout(() => {
+      this.load();
+    }, 3000);
   }
 
   async load() {
@@ -49,9 +55,15 @@ class App extends Component<{}, {
 
     if (this.state.isLoading) {
       return (
-        <h1>
-          Loading...
-        </h1>
+        <div>
+          <ProgressBar mode="indeterminate" />
+          <h1>
+            Loading...
+          </h1>
+          <div>
+            <FunnyMessages />
+          </div>
+        </div>
       );
     }
 
