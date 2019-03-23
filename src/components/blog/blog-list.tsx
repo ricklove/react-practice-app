@@ -16,7 +16,11 @@ class BlogList extends Component<{ articles: IBlogPost[] }, { articles: IBlogPos
 
     Post = ({ post }: { post: IBlogPostViewModel }) => (
         <div className='blog-post'>
-            <h1 className='blog-post-title' onClick={post.toggle}>{post.isSelected && (<Button onClick={post.toggle} label='Back' />)} {post.title}</h1>
+            <h1 className='blog-post-title' onClick={post.toggle}>
+                {!!post.isSelected && (<span>&lt;&lt;</span>)}
+                {!post.isSelected && (<span>&gt;&gt;</span>)}
+                {post.title}
+            </h1>
             <div className='blog-post-content'>
                 <MarkdownPreview value={post.isSelected ? post.content : post.abstract} />
             </div>
@@ -37,11 +41,13 @@ class BlogList extends Component<{ articles: IBlogPost[] }, { articles: IBlogPos
             }
         });
 
+        const shouldHideUnselected = false;
+
         return (
             <div className='blog-list'>
                 <h3>{this.state.articles.length} Articles</h3>
-                {!!this.state.selected && <this.Post post={this.state.selected} />}
-                {!this.state.selected && this.state.articles.map((x, i) => (<this.Post key={i} post={x} />))}
+                {(shouldHideUnselected && !!this.state.selected) && <this.Post post={this.state.selected} />}
+                {(!shouldHideUnselected || !this.state.selected) && this.state.articles.map((x, i) => (<this.Post key={i} post={x} />))}
             </div>
         );
     }

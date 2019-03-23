@@ -48,3 +48,9 @@ Created with create-react-app.
     - `./components/layout/main-layout`
     - `./components/layout/layout.css`
 
+- Blog Articles
+    - `./components/blog`
+    - Markdown Rendering
+    - Automatic Article Abstract (Content before first # section)
+    - Expand/Collapse Article
+
